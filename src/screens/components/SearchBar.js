@@ -2,11 +2,18 @@ import React from "react";
 import { View, TextInput, StyleSheet } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
-const SearchBar = () => {
+const SearchBar = ({ term, onTermChange }) => {
   return (
     <View style={styles.backgroundStyle}>
       <MaterialIcons name="search" style={styles.iconStyle} />
-      <TextInput style={styles.inputStyle} placeholder={"Search"}></TextInput>
+      <TextInput
+        autoCapitalize="none"
+        autoCorrect={false}
+        style={styles.inputStyle}
+        placeholder={"Search"}
+        value={term}
+        onChangeText={newTerm => onTermChange(newTerm)}
+      ></TextInput>
     </View>
   );
 };
