@@ -4,20 +4,25 @@ import { MaterialIcons } from "@expo/vector-icons";
 
 const SearchBar = () => {
   return (
-    <View style={styles.background}>
+    <View style={styles.backgroundStyle}>
       <MaterialIcons name="search" size={30} />
-      <TextInput></TextInput>
+      <TextInput style={styles.inputStyle}></TextInput>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  background: {
+  backgroundStyle: {
     backgroundColor: "#F0EEEE",
     height: 50,
     borderRadius: 5,
     marginHorizontal: 15,
     flexDirection: "row"
+  },
+  inputStyle: {
+    borderColor: "black",
+    borderWidth: 1,
+    flex: 1
   }
 });
 
