@@ -9,6 +9,7 @@ const SearchScreen = () => {
     <View>
       <SearchBar term={term} onTermChange={newTerm => setTerm(newTerm)} />
       <Text>Search Screen</Text>
+      <Text>{term}</Text>
     </View>
   );
 };
