@@ -28,11 +28,11 @@ const SearchScreen = () => {
       <ResultsList title="Cheap Eats" results={filterResultsByPrice("$")} />
       <ResultsList
         title="Good Value Eats"
-        results={filterResultsByPrice("$")}
+        results={filterResultsByPrice("$$")}
       />
       <ResultsList
         title="Deep Pocket Eats"
-        results={filterResultsByPrice("$")}
+        results={filterResultsByPrice("$$$")}
       />
     </View>
   );
