@@ -10,6 +10,12 @@ const SearchScreen = () => {
   // Hook data
   const [searchApi, results, errorMessage] = useResults();
 
+  const filterResultsByPrice = price => {
+    return results.filter(result => {
+      return result.price === price;
+    });
+  };
+
   return (
     <View>
       <SearchBar
