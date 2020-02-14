@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Image, Text, StyleSheet } from "react-native";
 
 const ResultsDetail = ({ result }) => {
   return (
     <View>
+      <Image source={{ uri: result.image_url }} />
       <Text>{result.name}</Text>
     </View>
   );
