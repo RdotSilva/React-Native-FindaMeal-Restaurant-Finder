@@ -14,6 +14,7 @@ const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
         value={term}
         onChangeText={onTermChange}
         onEndEditing={onTermSubmit}
+        clearTextOnFocus
       ></TextInput>
     </View>
   );
