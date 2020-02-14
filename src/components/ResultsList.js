@@ -4,7 +4,7 @@ import ResultsDetail from "./ResultsDetail";
 
 const ResultsList = ({ title, results }) => {
   return (
-    <View>
+    <View style={styles.containerStyle}>
       <Text style={styles.titleStyle}>{title}</Text>
       <FlatList
         horizontal
@@ -23,6 +23,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     marginLeft: 15
+  },
+  containerStyle: {
+    marginBottom: 10
   }
 });
 
