@@ -7,31 +7,12 @@ import ResultsShowScreen from "./src/screens/ResultsShowScreen";
 // React navigation
 import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import AppNavigator from "./src/navigation/AppNavigator";
 
 const Stack = createStackNavigator();
 
 const App = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Search">
-        <Stack.Screen
-          name="Search"
-          component={SearchScreen}
-          options={{ title: "Search" }}
-        />
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ title: "Home" }}
-        />
-        <Stack.Screen
-          name="ResultsShow"
-          component={ResultsShowScreen}
-          options={{ title: "Results Show" }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+  return <AppNavigator />;
 };
 
 const styles = StyleSheet.create({
