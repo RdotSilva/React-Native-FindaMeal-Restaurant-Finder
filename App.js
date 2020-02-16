@@ -2,9 +2,10 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import SearchScreen from "./src/screens/SearchScreen";
 import HomeScreen from "./src/screens/HomeScreen";
+import ResultsShowScreen from "./src/screens/ResultsShowScreen";
 
 // React navigation
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
@@ -22,6 +23,11 @@ const App = () => {
           name="Home"
           component={HomeScreen}
           options={{ title: "Home" }}
+        />
+        <Stack.Screen
+          name="ResultsShow"
+          component={ResultsShowScreen}
+          options={{ title: "Results Show" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
