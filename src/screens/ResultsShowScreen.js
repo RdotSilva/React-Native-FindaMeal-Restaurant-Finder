@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, FlatList, Image } from "react-native";
+import { View, Text, StyleSheet, FlatList, Image, Linking } from "react-native";
 import yelp from "../api/yelp";
 
 const ResultsShowScreen = ({ navigation, route }) => {
@@ -23,7 +23,13 @@ const ResultsShowScreen = ({ navigation, route }) => {
     <View>
       <Text>{result.name}</Text>
       <Text>{result.is_closed ? "CLOSED" : "OPEN"}</Text>
-      <Text>{result.phone.substring(1)}</Text>
+      <Text
+        onPress={() => {
+          Linking.openURL(`tel:${result.phone}`);
+        }}
+      >
+        {result.phone.substring(1)}
+      </Text>
       <FlatList
         data={result.photos}
         keyExtractor={photo => photo}
