@@ -22,6 +22,7 @@ const ResultsShowScreen = ({ navigation, route }) => {
   return (
     <View>
       <Text>{result.name}</Text>
+      <Text>{result.is_closed ? "CLOSED" : "OPEN"}</Text>
       <FlatList
         data={result.photos}
         keyExtractor={photo => photo}
