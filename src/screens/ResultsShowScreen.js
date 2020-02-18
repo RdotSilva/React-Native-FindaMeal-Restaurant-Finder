@@ -30,6 +30,7 @@ const ResultsShowScreen = ({ navigation, route }) => {
       >
         {result.display_phone}
       </Text>
+      <Text>{result.review_count} Total Reviews</Text>
       <FlatList
         data={result.photos}
         keyExtractor={photo => photo}
