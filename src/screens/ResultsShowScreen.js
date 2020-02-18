@@ -20,8 +20,8 @@ const ResultsShowScreen = ({ navigation, route }) => {
   }
 
   return (
-    <View>
-      <Text>{result.name}</Text>
+    <View style={styles.containerStyles}>
+      <Text style={styles.titleStyle}>{result.name}</Text>
       <FlatList
         data={result.categories}
         keyExtractor={category => category.alias}
@@ -55,6 +55,9 @@ const ResultsShowScreen = ({ navigation, route }) => {
 };
 
 const styles = StyleSheet.create({
+  containerStyles: {
+    flex: 1
+  },
   imageStyles: {
     height: 200,
     width: 300
