@@ -7,17 +7,21 @@ const ResultsShowScreen = ({ navigation, route }) => {
   const id = route.params.id;
 
   const getResult = async id => {
-    const res = await yelp.get(`/${id}`);
-    setResult(res.data);
+    const response = await yelp.get(`/${id}`);
+    setResult(response.data);
   };
 
   useEffect(() => {
-    getResult();
+    getResult(id);
   }, []);
+
+  if (!result) {
+    return null;
+  }
 
   return (
     <View>
-      <Text></Text>
+      <Text>{result.name}</Text>
     </View>
   );
 };
