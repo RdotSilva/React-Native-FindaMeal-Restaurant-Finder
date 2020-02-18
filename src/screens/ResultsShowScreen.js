@@ -23,6 +23,7 @@ const ResultsShowScreen = ({ navigation, route }) => {
     <View>
       <Text>{result.name}</Text>
       <Text>{result.is_closed ? "CLOSED" : "OPEN"}</Text>
+      <Text>{result.phone.substring(1)}</Text>
       <FlatList
         data={result.photos}
         keyExtractor={photo => photo}
