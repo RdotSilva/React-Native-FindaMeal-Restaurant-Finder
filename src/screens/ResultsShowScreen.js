@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import { View, Text, StyleSheet, FlatList, Image } from "react-native";
 import yelp from "../api/yelp";
 
 const ResultsShowScreen = ({ navigation, route }) => {
@@ -26,7 +26,7 @@ const ResultsShowScreen = ({ navigation, route }) => {
         data={result.photos}
         keyExtractor={photo => photo}
         renderItem={({ item }) => {
-          item;
+          return <Image source={{ uri: item }} />;
         }}
       />
     </View>
