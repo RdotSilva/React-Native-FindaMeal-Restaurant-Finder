@@ -22,6 +22,13 @@ const ResultsShowScreen = ({ navigation, route }) => {
   return (
     <View>
       <Text>{result.name}</Text>
+      <FlatList
+        data={result.categories}
+        keyExtractor={category => category.alias}
+        renderItem={({ item }) => {
+          return <Text>{item.title}</Text>;
+        }}
+      />
       <Text>{result.is_closed ? "CLOSED" : "OPEN"}</Text>
       <Text
         onPress={() => {
