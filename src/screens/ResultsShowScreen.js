@@ -31,6 +31,10 @@ const ResultsShowScreen = ({ navigation, route }) => {
         {result.display_phone}
       </Text>
       <Text>{result.review_count} Total Reviews</Text>
+      <Text>
+        {result.location.address1} {result.location.city},
+        {result.location.state}
+      </Text>
       <FlatList
         data={result.photos}
         keyExtractor={photo => photo}
