@@ -26,13 +26,18 @@ const ResultsShowScreen = ({ navigation, route }) => {
         data={result.photos}
         keyExtractor={photo => photo}
         renderItem={({ item }) => {
-          return <Image source={{ uri: item }} />;
+          return <Image style={styles.imageStyles} source={{ uri: item }} />;
         }}
       />
     </View>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  imageStyles: {
+    height: 200,
+    width: 300
+  }
+});
 
 export default ResultsShowScreen;
