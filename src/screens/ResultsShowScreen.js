@@ -28,7 +28,7 @@ const ResultsShowScreen = ({ navigation, route }) => {
           Linking.openURL(`tel:${result.phone}`);
         }}
       >
-        {result.phone.substring(1)}
+        {result.display_phone}
       </Text>
       <FlatList
         data={result.photos}
