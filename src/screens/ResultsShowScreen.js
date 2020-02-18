@@ -38,6 +38,7 @@ const ResultsShowScreen = ({ navigation, route }) => {
         {result.display_phone}
       </Text>
       <Text>{result.review_count} Total Reviews</Text>
+      <Text>{result.rating} / 5 Rating</Text>
       <Text>
         {result.location.address1} {result.location.city},
         {result.location.state}
