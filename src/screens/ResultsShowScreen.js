@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, FlatList } from "react-native";
 import yelp from "../api/yelp";
 
 const ResultsShowScreen = ({ navigation, route }) => {
@@ -22,6 +22,13 @@ const ResultsShowScreen = ({ navigation, route }) => {
   return (
     <View>
       <Text>{result.name}</Text>
+      <FlatList
+        data={result.photos}
+        keyExtractor={photo => photo}
+        renderItem={({ item }) => {
+          item;
+        }}
+      />
     </View>
   );
 };
