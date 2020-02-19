@@ -16,7 +16,14 @@ const Categories = ({ result }) => {
 const styles = StyleSheet.create({
   categoryStyles: {
     fontSize: 20,
-    alignSelf: "center"
+    alignSelf: "center",
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#AE76A6",
+    margin: 2,
+    padding: 2,
+    backgroundColor: "#AE76A6",
+    overflow: "hidden"
   }
 });
 
