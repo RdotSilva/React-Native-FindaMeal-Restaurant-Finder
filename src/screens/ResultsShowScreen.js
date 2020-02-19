@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, FlatList, Image, Linking } from "react-native";
 import yelp from "../api/yelp";
 import ImageCollection from "../components/ImageCollection";
 import Categories from "../components/ResultDetail/Categories";
+import OpenOrClosed from "../components/ResultDetail/OpenOrClosed";
 
 const ResultsShowScreen = ({ navigation, route }) => {
   const [result, setResult] = useState(null);
@@ -27,7 +28,7 @@ const ResultsShowScreen = ({ navigation, route }) => {
       <View>
         <Categories result={result} />
       </View>
-      <Text>{result.is_closed ? "CLOSED" : "OPEN"}</Text>
+      <OpenOrClosed result={result} />
       <Text
         onPress={() => {
           Linking.openURL(`tel:${result.phone}`);
@@ -57,10 +58,6 @@ const styles = StyleSheet.create({
   imageStyles: {
     height: 200,
     width: 300
-  },
-  categoryStyles: {
-    fontSize: 20,
-    alignSelf: "center"
   }
 });
 
