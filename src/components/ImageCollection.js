@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList, StyleSheet } from "react-native";
+import { View, Text, FlatList, Image, StyleSheet } from "react-native";
 
 const ImageCollection = ({ result }) => {
   return (
@@ -7,12 +7,14 @@ const ImageCollection = ({ result }) => {
       data={result.photos}
       keyExtractor={photo => photo}
       renderItem={({ item }) => {
-        return <Image source={{ uri: item }} />;
+        return <Image style={styles.imageStyles} source={{ uri: item }} />;
       }}
     />
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  imageStyles: { height: 200, width: 300 }
+});
 
 export default ImageCollection;
