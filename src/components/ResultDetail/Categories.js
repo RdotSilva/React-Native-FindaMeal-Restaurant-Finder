@@ -13,6 +13,11 @@ const Categories = ({ result }) => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  categoryStyles: {
+    fontSize: 20,
+    alignSelf: "center"
+  }
+});
 
 export default Categories;
