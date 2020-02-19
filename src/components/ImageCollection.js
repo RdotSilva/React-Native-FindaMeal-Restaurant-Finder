@@ -16,7 +16,7 @@ const ImageCollection = ({ result }) => {
 };
 
 const styles = StyleSheet.create({
-  imageStyles: { height: 200, width: 300, margin: 5 }
+  imageStyles: { height: 200, width: 200, margin: 5, borderRadius: 10 }
 });
 
 export default ImageCollection;
