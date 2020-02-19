@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, FlatList, Image, Linking } from "react-native";
 import yelp from "../api/yelp";
 import ImageCollection from "../components/ImageCollection";
+import Categories from "../components/ResultDetail/Categories";
 
 const ResultsShowScreen = ({ navigation, route }) => {
   const [result, setResult] = useState(null);
@@ -24,13 +25,7 @@ const ResultsShowScreen = ({ navigation, route }) => {
     <View style={styles.containerStyles}>
       <Text style={styles.titleStyles}>{result.name}</Text>
       <View>
-        <FlatList
-          data={result.categories}
-          keyExtractor={category => category.alias}
-          renderItem={({ item }) => {
-            return <Text style={styles.categoryStyles}>{item.title}</Text>;
-          }}
-        />
+        <Categories result={result} />
       </View>
       <Text>{result.is_closed ? "CLOSED" : "OPEN"}</Text>
       <Text
