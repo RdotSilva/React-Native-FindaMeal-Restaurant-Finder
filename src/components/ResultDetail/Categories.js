@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList } from "react-native";
+import { View, Text, FlatList, StyleSheet } from "react-native";
 
 const Categories = () => {
   return (
@@ -8,5 +8,7 @@ const Categories = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({});
 
 export default Categories;
