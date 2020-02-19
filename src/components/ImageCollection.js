@@ -1,11 +1,15 @@
 import React from "react";
 import { View, Text, FlatList } from "react-native";
 
-const ImageCollection = () => {
+const ImageCollection = ({ result }) => {
   return (
-    <View>
-      <Text>Image Collection</Text>
-    </View>
+    <FlatList
+      data={result.photos}
+      keyExtractor={photo => photo}
+      renderItem={({ item }) => {
+        return <Image source={{ uri: item }} />;
+      }}
+    />
   );
 };
 
