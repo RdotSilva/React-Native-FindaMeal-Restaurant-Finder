@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, FlatList, Image, Linking } from "react-native";
 import yelp from "../api/yelp";
+import ImageCollection from "../components/ImageCollection";
 
 const ResultsShowScreen = ({ navigation, route }) => {
   const [result, setResult] = useState(null);
@@ -43,13 +44,7 @@ const ResultsShowScreen = ({ navigation, route }) => {
         {result.location.address1} {result.location.city},
         {result.location.state}
       </Text>
-      <FlatList
-        data={result.photos}
-        keyExtractor={photo => photo}
-        renderItem={({ item }) => {
-          return <Image style={styles.imageStyles} source={{ uri: item }} />;
-        }}
-      />
+      <ImageCollection result={result} />
     </View>
   );
 };
