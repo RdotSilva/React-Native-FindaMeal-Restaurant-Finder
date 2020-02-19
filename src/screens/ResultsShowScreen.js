@@ -23,13 +23,15 @@ const ResultsShowScreen = ({ navigation, route }) => {
   return (
     <View style={styles.containerStyles}>
       <Text style={styles.titleStyles}>{result.name}</Text>
-      <FlatList
-        data={result.categories}
-        keyExtractor={category => category.alias}
-        renderItem={({ item }) => {
-          return <Text>{item.title}</Text>;
-        }}
-      />
+      <View>
+        <FlatList
+          data={result.categories}
+          keyExtractor={category => category.alias}
+          renderItem={({ item }) => {
+            return <Text style={styles.categoryStyles}>{item.title}</Text>;
+          }}
+        />
+      </View>
       <Text>{result.is_closed ? "CLOSED" : "OPEN"}</Text>
       <Text
         onPress={() => {
@@ -60,6 +62,10 @@ const styles = StyleSheet.create({
   imageStyles: {
     height: 200,
     width: 300
+  },
+  categoryStyles: {
+    fontSize: 20,
+    alignSelf: "center"
   }
 });
 
