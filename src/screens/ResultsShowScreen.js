@@ -4,6 +4,7 @@ import yelp from "../api/yelp";
 import ImageCollection from "../components/ImageCollection";
 import Categories from "../components/ResultDetail/Categories";
 import OpenOrClosed from "../components/ResultDetail/OpenOrClosed";
+import Address from "../components/ResultDetail/Address";
 
 const ResultsShowScreen = ({ navigation, route }) => {
   const [result, setResult] = useState(null);
@@ -25,6 +26,7 @@ const ResultsShowScreen = ({ navigation, route }) => {
   return (
     <View style={styles.containerStyles}>
       <Text style={styles.titleStyles}>{result.name}</Text>
+      <Address result={result} />
       <View>
         <Categories result={result} />
       </View>
@@ -38,10 +40,6 @@ const ResultsShowScreen = ({ navigation, route }) => {
       </Text>
       <Text>{result.review_count} Total Reviews</Text>
       <Text>{result.rating} / 5 Rating</Text>
-      <Text>
-        {result.location.address1} {result.location.city},
-        {result.location.state}
-      </Text>
       <ImageCollection result={result} />
     </View>
   );
