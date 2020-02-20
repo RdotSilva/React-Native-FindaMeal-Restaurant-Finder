@@ -15,10 +15,14 @@ const OpenOrClosed = ({ result }) => {
 
 const styles = StyleSheet.create({
   openStyles: {
-    color: "#83B692"
+    color: "#83B692",
+    alignSelf: "center",
+    fontSize: 22
   },
   closedStyles: {
-    color: "#83B692"
+    color: "#D33F49",
+    alignSelf: "center",
+    fontSize: 22
   }
 });
 
