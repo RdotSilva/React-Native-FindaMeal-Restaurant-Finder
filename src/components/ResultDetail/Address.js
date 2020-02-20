@@ -13,4 +13,8 @@ const Address = ({ result }) => {
   );
 };
 
+const styles = StyleSheet.create({
+  addressStyles: { alignSelf: "center" }
+});
+
 export default Address;
