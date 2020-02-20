@@ -19,7 +19,12 @@ const Address = ({ result }) => {
 };
 
 const styles = StyleSheet.create({
-  addressStyles: { alignSelf: "center" }
+  addressStyles: {
+    alignSelf: "center",
+    fontSize: 18,
+    color: "#2D93AD",
+    margin: 10
+  }
 });
 
 export default Address;
