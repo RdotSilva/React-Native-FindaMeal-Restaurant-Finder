@@ -2,10 +2,13 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 const renderOpenOrClosed = result => {
-  return result.is_closed ? (
-    <Text style={styles.openStyles}>CLOSED</Text>
+  // Pull the open now data from the hours array returned from API
+  const isOpenNow = result.hours[0].is_open_now;
+
+  return isOpenNow ? (
+    <Text style={styles.openStyles}>OPEN</Text>
   ) : (
-    <Text style={styles.closedStyles}>OPEN</Text>
+    <Text style={styles.closedStyles}>CLOSED</Text>
   );
 };
 
