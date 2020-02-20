@@ -3,9 +3,9 @@ import { View, Text, StyleSheet } from "react-native";
 
 const renderOpenOrClosed = result => {
   return result.is_closed ? (
-    <Text style={styles.color}>CLOSED</Text>
+    <Text style={styles.openStyles}>CLOSED</Text>
   ) : (
-    <Text>OPEN</Text>
+    <Text style={styles.closedStyles}>OPEN</Text>
   );
 };
 
@@ -15,6 +15,9 @@ const OpenOrClosed = ({ result }) => {
 
 const styles = StyleSheet.create({
   openStyles: {
+    color: "#83B692"
+  },
+  closedStyles: {
     color: "#83B692"
   }
 });
