@@ -20,12 +20,16 @@ const styles = StyleSheet.create({
   openStyles: {
     color: "#83B692",
     alignSelf: "center",
-    fontSize: 22
+    fontSize: 24,
+    margin: 10,
+    fontWeight: "bold"
   },
   closedStyles: {
     color: "#D33F49",
     alignSelf: "center",
-    fontSize: 22
+    fontSize: 24,
+    margin: 10,
+    fontWeight: "bold"
   }
 });
 
