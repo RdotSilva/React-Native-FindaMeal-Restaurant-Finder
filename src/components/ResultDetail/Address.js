@@ -1,10 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const Address = () => {
+const Address = ({ result }) => {
   return (
     <View>
-      <Text>Address</Text>
+      <Text>
+        {result.location.address1} {result.location.city},
+        {result.location.state}
+      </Text>
     </View>
   );
 };
