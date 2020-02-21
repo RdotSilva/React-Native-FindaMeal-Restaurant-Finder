@@ -6,6 +6,7 @@ import Categories from "../components/ResultDetail/Categories";
 import OpenOrClosed from "../components/ResultDetail/OpenOrClosed";
 import Address from "../components/ResultDetail/Address";
 import PhoneNumber from "../components/ResultDetail/PhoneNumber";
+import Reviews from "../components/ResultDetail/Reviews";
 
 const ResultsShowScreen = ({ navigation, route }) => {
   const [result, setResult] = useState(null);
@@ -33,8 +34,7 @@ const ResultsShowScreen = ({ navigation, route }) => {
       </View>
       <OpenOrClosed result={result} />
       <PhoneNumber result={result} />
-      <Text>{result.review_count} Total Reviews</Text>
-      <Text>{result.rating} / 5 Rating</Text>
+      <Reviews result={result} />
       <ImageCollection result={result} />
     </View>
   );
